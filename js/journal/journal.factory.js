@@ -3,20 +3,21 @@ angular
   .factory('journalFactory', journalFactory);
 
   function journalFactory($http, BASE_URL) {
-      var journals = {};
+      // var journals = {};
       var fb = new Firebase(BASE_URL);
+      var vm = this;
 
-      journals.findAll = function(cb) {
+      findAll = function(cb) {
         $http
           .get(BASE_URL + '/users.json')
           .success(function (data) {
             cb(data);
             // console.log('JOURNAL!!!!!S',journals);
           });
+      }
+      return {
+findAll: findAll
       };
-  return journals;
-
-
 }
 
 
@@ -32,7 +33,6 @@ angular
 //         cb(res);
 //       });
 //   };
-   
 
   // kids.findOne = function (fb, cb) {
   //   $http

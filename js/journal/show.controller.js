@@ -8,13 +8,15 @@ function ShowController( $http, journalFactory, $scope, BASE_URL) {
   vm.journal;
   vm.journalUsers;
 
-  $http.get(BASE_URL + "/users/simplelogin%3A35/journal.json")
-  .success(
-    function(data){
-      vm.journalUsers = data;
-      console.log(vm.journalUsers);
-    });
-
+  // $http.get(BASE_URL + "/users.json")
+  // .success(
+  //   function(data){
+  //     vm.journalUsers = data;
+  //     console.log(vm.journalUsers);
+  //   });
+  journalFactory.findAll(function(data){
+    vm.journalUsers = data;
+  });
   // journalFactory.findAll(function (journals) {
   //   var journalVals = [];
   //   var Arrays = [];
