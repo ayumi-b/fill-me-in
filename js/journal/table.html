@@ -14,15 +14,7 @@
       <th>What I do at Home</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td class="journalAnswers" ng-repeat="value in journalVals track by $index">{{value}}<td>
+    <tr ng-repeat="item in journals.journalUsers">
+      <td class="journalAnswers" >{{item}}<td>
     </tr>
-    <tr>
-      <td>{{value}}</td>
-    </tr>
-    <tr>
-      <td>{{value}}</td>
-    </tr>
-  </tbody>
 </table>
