@@ -7,6 +7,7 @@ function ShowController( $http, journalFactory, $scope, BASE_URL) {
   // vm.journals = {};
   vm.journal;
   vm.journalUsers;
+  vm.tempUsersArray = [];
 
   // $http.get(BASE_URL + "/users.json")
   // .success(
@@ -16,6 +17,7 @@ function ShowController( $http, journalFactory, $scope, BASE_URL) {
   //   });
   journalFactory.findAll(function(data){
     vm.journalUsers = data;
+    console.log(data);
   });
   // journalFactory.findAll(function (journals) {
   //   var journalVals = [];

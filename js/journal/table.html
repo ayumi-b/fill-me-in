@@ -15,6 +15,11 @@
     </tr>
   </thead>
     <tr ng-repeat="item in journals.journalUsers">
-      <td class="journalAnswers" >{{item}}<td>
+    <td class="journalAnswers">{{item.profile.name}}</td>
+        <td class="journalAnswers" ng-repeat="journal in item" >{{journal.homeActivity}}<td>
+        <td class="journalAnswers" ng-repeat="journal in item" >{{journal.homeFood}}<td>
+        <td class="journalAnswers" ng-repeat="journal in item" >{{journal.futureWhy}}<td>
+  
+
     </tr>
 </table>
