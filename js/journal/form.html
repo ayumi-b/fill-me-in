@@ -1,0 +1,56 @@
+<form name="kids.newJournalForm" class="form-inline" ng-submit="kids.addJournal()" novalidate>
+  <h2>Here's the deal.  This is your journal.  And here are the instructions that seem so innocuous but is really a psychological tool.</h2>
+<br>
+
+  <div class="dear">Dear Awesome Journal,</div>
+
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">How are you today? If I could change one thing about school, it would be </label>
+    <input class="form-control" ng-model="kids.newJournal.schoolChange" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">Some of my favorite foods are </label>
+    <input class="form-control" ng-model="kids.newJournal.selfFood" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">For dinner last night, I had </label>
+    <input class="form-control" ng-model="kids.newJournal.homeFood" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">. I</label>
+    <input class="form-control" ng-model="kids.newJournal.schoolMood" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">school, because </label>
+    <input class="form-control" ng-model="kids.newJournal.schoolMoodWhy" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">. I think I might like to be a </label>
+    <input class="form-control" ng-model="kids.newJournal.selfFuture" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">when I grow up. It sounds interesting, because</label>
+    <input class="form-control" ng-model="kids.newJournal.selfFutureWhy" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">. I think I am really good at </label>
+    <input class="form-control" ng-model="kids.newJournal.selfGood" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">, but I want to get better at </label>
+    <input class="form-control" ng-model="kids.newJournal.selfImprove" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">. The kids in my class are </label>
+    <input class="form-control" ng-model="kids.newJournal.schoolMates" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': kids.newJournalForm.$dirty}">
+    <label class="control-label">When I go home, I do a lot of</label>
+    <input class="form-control" ng-model="kids.newJournal.homeActivity" required>
+  </div>
+  <br>
+  <br>
+
+    <input class="btn btn-danger btn-lg" ng-show="kids.newJournalForm.$valid" type="submit" value="It's all filled out! I am done!">
+    <br>
+    <br>

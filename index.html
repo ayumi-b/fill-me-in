@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-US" ng-app="kids">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fill.me.in</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Patrick+Hand|Short+Stack|Delius|Delius+Unicase' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="pencil-icon-16-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-24-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-32-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-48-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-57-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-64-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-72-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-114-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-120-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-144-190958.png" />
+    <link rel="icon" type="image/x-icon" href="pencil-icon-152-190958.png" />
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <div class="container-fluid"> 
+      <div class ="col-lg-12">
+      <h1>Fill Me In</h1>
+      <a class="btn btn-default btn-sm" href="/#/journal">Home</a>
+      <div ng-show="user">       
+<!--         <a class="btn btn-primary" href="/#/journal/new">New Journal Page</a> -->
+        <a class="btn btn-warning btn-sm" href="/#/logout">Log Out</a>
+      </div>
+      <div ng-view></div>
+      </div>
+    </div>
+
+
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/main.module.js"></script>
+    <script src="js/auth/auth.config.js"></script>
+    <script src="js/main.config.js"></script>
+    <script src="js/main.constants.js"></script>
+    <script src="js/main.filters.js"></script>
+    <script src="js/auth/auth.factory.js"></script>
+    <script src="js/auth/auth.controller.js"></script>
+    <script src="js/auth/logout.controller.js"></script>
+    <script src="js/journal/edit.controller.js"></script>
+    <script src="js/journal/show.controller.js"></script>
+    <script src="js/journal/journal.controller.js"></script>
+    <script src="js/journal/journal.factory.js"></script>
+
+  </body>
+</html>

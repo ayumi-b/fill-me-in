@@ -1,0 +1,64 @@
+/* Global Styles */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #2F4F4F;
+    background-image: url('https://c1.staticflickr.com/3/2725/4030910412_462ffb7823_b.jpg');
+    background-repeat: none;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+}
+
+
+
+.container-fluid {
+/*    display: table-cell;*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+.container-fluid h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    font-weight: 700;
+    color: white;
+}
+
+.entry {
+    background-color: #2f4f4f;
+    background-image: url('https://c1.staticflickr.com/3/2725/4030910412_462ffb7823_b.jpg');
+    background-repeat: none;
+    background-size: cover;
+    color: white;
+    font-size: 2em;
+}
+.entry h2 {
+    font-size: 2.3em;
+}
+
+.dear {
+    text-align: left;
+    padding-left: 50px;
+}
+.form-inline {
+    background-image: url("http://timvandevall.com/wp-content/uploads/2013/05/Lined-Paper-Template-21.jpg");
+    background-size: cover;
+    background-length: cover;
+    background-repeat: no-repeat;
+    font-size: 2em;
+
+}
+
+.form-inline .form-control {
+    opacity: 1;
+}
+
+.table-condensed {
+    color: white;
+}
