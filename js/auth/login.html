@@ -1,19 +1,19 @@
 <form name="loginForm" class="entry" ng-submit="auth.login()">
   <h2>Hey! What's your name?</h2>
   <input type="text" ng-model="auth.user.name">
-  <h2>Glad to see you here, {{auth.user.name}}!</h2>
+  <h2 ng-show="auth.user.name">Glad to see you here, {{auth.user.name}}!</h2>
 
-  <div class="form-group form-group-lg">
+  <div class="form-group form-group-lg" ng-show="auth.user.name">
     <label>So, what is your email address?</label>
     <input type="email" class="form-control" placeholder="so, what's your email address?" ng-model="auth.user.email" required>
   </div>
 
-  <div class="form-group">
+  <div class="form-group" ng-show ="auth.user.email">
     <label>what's your super-secret password?</label>
     <input type="password" class="form-control" placeholder="Password" ng-model="auth.user.password" required>
   </div>
 
-  <div class="btn btn-default btn-lg" ng-click="auth.register()">Register</div>
-  <input type="submit" class="btn btn-primary btn-lg" value="Login">
-  <div class="btn btn-warning btn-lg" ng-click="auth.forgotPassword()">Forgot Password</div>
+  <div class="btn btn-default btn-lg" ng-click="auth.register()" ng-show="auth.user.password">Register</div>
+  <input type="submit" class="btn btn-primary btn-lg" value="Login" ng-show="auth.user.password">
+  <div class="btn btn-warning btn-lg" ng-click="auth.forgotPassword()" ng-show="auth.user.password">Forgot Password</div>
 </form>
