@@ -45,7 +45,10 @@ function JournalController($http, $rootScope, $location, $scope, authFactory, BA
   //   vm.findAll = function (kids, fb) {
   //   vm.data = kids;
   // };
-
+  vm.go = function () {
+    $location.path('/journal/end');
+    $scope.$apply();
+};
 
 
 

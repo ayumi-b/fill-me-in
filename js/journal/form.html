@@ -1,5 +1,5 @@
 <form name="kids.newJournalForm" class="form-inline" ng-submit="kids.addJournal()" novalidate>
-  <h2>Here's the deal.  This is your journal.  And here are the instructions that seem so innocuous but is really a psychological tool.</h2>
+  <h2>Here's the deal.  This is your journal.  And YOU get to fill in the blanks!</h2>
 <br>
 
   <div class="dear">Dear Awesome Journal,</div>
@@ -51,6 +51,6 @@
   <br>
   <br>
 
-    <input class="btn btn-danger btn-lg" ng-show="kids.newJournalForm.$valid" type="submit" value="It's all filled out! I am done!">
+    <input class="btn btn-danger btn-lg" ng-click="kids.go('/journal/end')" ng-show="kids.newJournalForm.$valid" type="submit" value="It's all filled out! I am done!">
     <br>
     <br>
