@@ -1,25 +1,58 @@
-<table class="table-condensed">
+<br>
+<table class="table-bordered">
   <thead>
     <tr>
       <th>Student</th>
-      <th>One Change at School</th>
-      <th>Favorite Food</th>
-      <th>What was for Dinner?</th>
-      <th>Do you like school?</th>
+      <th>Home Activity</th>
+      <th>Home Food</th>
+      <th>School Change</th>
+      <th>School Mates</th>
       <th>School Mood</th>
-      <th>Future Self</th>
-      <th>Future Reasoning</th>
-      <th>Good At</th>
-      <th>Need Improvement</th>
-      <th>What I do at Home</th>
+      <th>School Mood Why</th>
+      <th>Self Food</th>
+      <th>Self Future</th>
+      <th>Self Future Why</th>
+      <th>Self Good</th>
+      <th>Self Improve</th>
     </tr>
   </thead>
-    <tr ng-repeat="item in journals.journalUsers">
+    <tbody ng-repeat="item in journals.journalUsers" span=1>
+      <tr ng-repeat="journal in item">
+        <td>{{item.profile.name}}</td>
+        <td>{{journal.homeActivity}}</td>
+        <td>{{journal.homeFood}}</td>
+        <td>{{journal.schoolChange}}</td>
+        <td>{{journal.schoolMates}}</td>
+        <td>{{journal.schoolMood}}</td>
+        <td>{{journal.schoolMoodWhy}}</td>
+        <td>{{journal.selfFood}}</td>
+        <td>{{journal.selfFuture}}</td>
+        <td>{{journal.selfFutureWhy}}</td>
+        <td>{{journal.selfGood}}</td>
+        <td>{{journal.selfImprove}}</td>
+      </tr>
+    </tbody>
+  </table>
+<!--   <tbody>
+  <tr ng-repeat="item in journals.journalUsers">
     <td class="journalAnswers">{{item.profile.name}}</td>
-        <td class="journalAnswers" ng-repeat="journal in item" >{{journal.homeActivity}}<td>
-        <td class="journalAnswers" ng-repeat="journal in item" >{{journal.homeFood}}<td>
-        <td class="journalAnswers" ng-repeat="journal in item" >{{journal.futureWhy}}<td>
-  
-
-    </tr>
+    <td class="journalStuff" ng-repeat="journal in item">{{journal.homeFood}}</td>
+    <td ng-repeat="journal in item">{{journal.homeActivity}}</td>
+  </tr> -->
+<!--     <td class="journalAnswers" ng-repeat="journal in item">{{journal.homeActivity}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.homeFood}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.schoolChange}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.schoolMates}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.schoolMood}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.schoolMoodWhy}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.selfFood}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.selfFuture}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.selfFutureWhy}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.selfGood}}</td>
+    <td class="journalAnswers" ng-repeat="journal in item">{{journal.selfImprove}}</td>
+  </tr>
+  </tbody>
 </table>
+<div class="wrapper" ng-controller="DocCtrl">
+    <ng-pdf template-url="/journal/viewer.html"></ng-pdf>
+</div>
