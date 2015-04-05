@@ -26,6 +26,12 @@ function journalConfig($routeProvider) {
       controller: 'JournalController',
       controllerAs: 'end'
     })
+    .when('/journal/viewer', {
+      templateUrl: 'js/journal/viewer.html',
+      controller: 'ShowController',
+      controllerAs: 'show'
+    })
+
     .otherwise({
       redirectTo: '/journal'
     });

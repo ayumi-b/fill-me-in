@@ -1,4 +1,7 @@
 <br>
+<!-- <div class="wrapper">
+    <ng-pdf template-url="/journal/viewer.html"></ng-pdf>
+</div> -->
 <table class="table-bordered">
   <thead>
     <tr>
@@ -33,6 +36,8 @@
       </tr>
     </tbody>
   </table>
+
+<a class="btn btn-danger btn-lg" ng-click="show.DocCtrl('/journal/viewer')" value="Show PDF">Show PDF</a>
 <!--   <tbody>
   <tr ng-repeat="item in journals.journalUsers">
     <td class="journalAnswers">{{item.profile.name}}</td>
@@ -53,6 +58,3 @@
   </tr>
   </tbody>
 </table>
-<div class="wrapper" ng-controller="DocCtrl">
-    <ng-pdf template-url="/journal/viewer.html"></ng-pdf>
-</div>
